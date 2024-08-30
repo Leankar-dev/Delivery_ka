@@ -1,0 +1,102 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Leandro Silva",
+            "email": "leandro@email.com",
+            "password": "123123"
+        }
+    ],
+    "payment-types": [
+        {
+            "id": 1,
+            "name": "Dinheiro",
+            "acronym": "DH",
+            "enabled": true
+        },
+        {
+            "id": 2,
+            "name": "MBWay",
+            "acronym": "MBW",
+            "enabled": true
+        },
+        {
+            "id": 3,
+            "name": "==",
+            "acronym": "XX",
+            "enabled": true
+        },
+        {
+            "id": 4,
+            "name": "**",
+            "acronym": "XX",
+            "enabled": true
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Brigadeiro de Chocolate",
+            "description": "Doce de Brigadeiro com chocolate",
+            "price": 2.0,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Brigadeiro.jpg/1200px-Brigadeiro.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Brigadeiro de Nutella",
+            "description": "Doce de Brigadeiro de Nutella",
+            "price": 1.0,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ76aVTY62YA16TK0rlrVMku4oUOk4wclZgYtEFvCKXhoM63RWJQaPZRXobkcewtgv8m0U&usqp=CAU"
+        },
+        {
+            "id": 3,
+            "name": "Brigadeiro de Coco",
+            "description": "Doce de Brigadeiro com Coco",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Brigadeiro de Nido",
+            "description": "Doce de Brigadeiro com Leite Nido",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Brigadeiro de Nido com Nutella",
+            "description": "Doce de Brigadeiro de Leite Nido com recheiro de Nutella",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Brigadeiro de Doce de Leite",
+            "description": "Doce de Brigadeiro com doce de leite",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Brigadeiro de Churros",
+            "description": "Doce de Brigadeiro de churros",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Brigadeiro de Maracuja",
+            "description": "Doce de Brigadeiro com Maracuja",
+            "price": 1.0,
+            "image": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3000-0268af56ca01eea044d715620d87ef38.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Bolo de Chocolate",
+            "description": "Bolo trufado de Chocolate",
+            "price": 25.0,
+            "image": "https://cdn.pixabay.com/photo/2024/08/20/06/23/ai-generated-8982206_1280.jpg"
+        }
+    ],
+    "orders": []
+}
