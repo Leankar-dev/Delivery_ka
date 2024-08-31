@@ -1,3 +1,4 @@
+import 'package:delivery_ka/app/core/provider/application_binding.dart';
 import 'package:delivery_ka/app/core/ui/routes/get_routes.dart';
 import 'package:delivery_ka/app/core/ui/theme/theme_config.dart';
 import 'package:delivery_ka/app/pages/splash/splash_page.dart';
@@ -8,13 +9,16 @@ class DeliveryKaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Delivery Ka',
-      theme: ThemeConfig.theme,
-      routes: {
-        GetRoutes.initial: (context) => const SplashPage(),
-      },
+    return ApplicationBinding(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Delivery Ka',
+        theme: ThemeConfig.theme,
+        routes: {
+          GetRoutes.initial: (context) => const SplashPage(),
+          '/homePage': (context) => GetRoutes.homePage,
+        },
+      ),
     );
   }
 }

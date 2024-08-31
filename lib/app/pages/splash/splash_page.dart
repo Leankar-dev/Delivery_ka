@@ -41,7 +41,9 @@ class SplashPage extends StatelessWidget {
                     height: 40,
                     label: 'ACESSAR',
                     color: DeliveryKaColors.whiteColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).popAndPushNamed('/homePage');
+                    },
                   ),
                 ],
               ),
