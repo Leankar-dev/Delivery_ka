@@ -26,9 +26,9 @@ class GetRoutes {
                   .read(), // para buscar as instancias da nossa arvore utilizamos o context
             ),
           ),
-          // Provider(
-          //   create: (context) => HomeController(context.read()),
-          // ),
+          Provider(
+            create: (context) => HomeController(context.read()),
+          ),
         ],
         child: const HomePage(),
       );

@@ -35,7 +35,7 @@ class DeliveryKaProductTile extends StatelessWidget {
                   child: Text(
                     product.description,
                     style:
-                        DeliveryKaTextStyles.textLight.copyWith(fontSize: 12),
+                        DeliveryKaTextStyles.textRegular.copyWith(fontSize: 12),
                   ),
                 ),
                 Padding(
