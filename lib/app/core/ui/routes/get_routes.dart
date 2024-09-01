@@ -1,5 +1,7 @@
 import 'package:delivery_ka/app/pages/home/home_controller.dart';
 import 'package:delivery_ka/app/pages/home/home_page.dart';
+import 'package:delivery_ka/app/pages/product_detail/product_detail_controller.dart';
+import 'package:delivery_ka/app/pages/product_detail/product_detail_page.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository_impl.dart';
 import 'package:flutter/material.dart';
@@ -33,20 +35,20 @@ class GetRoutes {
         child: const HomePage(),
       );
 
-  // static Widget get productsDetailPage => MultiProvider(
-  //       providers: [
-  //         Provider(
-  //           create: (context) => ProductDetailController(),
-  //         ),
-  //       ],
-  //       builder: (context, child) {
-  //         final args = ModalRoute.of(context)!.settings.arguments
-  //             as Map<String, dynamic>;
+  static Widget get productsDetailPage => MultiProvider(
+        providers: [
+          Provider(
+            create: (context) => ProductDetailController(),
+          ),
+        ],
+        builder: (context, child) {
+          final args = ModalRoute.of(context)!.settings.arguments
+              as Map<String, dynamic>;
 
-  //         return ProductDetailPage(
-  //           product: args['product'],
-  //           order: args['order'],
-  //         );
-  //       },
-  //     );
+          return  ProductDetailPage(
+              product: args['product'],
+              // order: args['order'],
+              );
+        },
+      );
 }

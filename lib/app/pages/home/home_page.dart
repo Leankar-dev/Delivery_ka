@@ -1,14 +1,10 @@
 import 'package:delivery_ka/app/core/ui/base_state/base_state.dart';
-import 'package:delivery_ka/app/core/ui/helpers/loader.dart';
-import 'package:delivery_ka/app/core/ui/helpers/messages.dart';
 import 'package:delivery_ka/app/core/ui/widgets/delivery_ka_appbar.dart';
 import 'package:delivery_ka/app/core/ui/widgets/delivery_ka_product_tile.dart';
-import 'package:delivery_ka/app/models/product_model.dart';
 import 'package:delivery_ka/app/pages/home/home_controller.dart';
 import 'package:delivery_ka/app/pages/home/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

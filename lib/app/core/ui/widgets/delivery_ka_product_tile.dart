@@ -14,51 +14,58 @@ class DeliveryKaProductTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    product.name,
-                    style: DeliveryKaTextStyles.textExtraBold
-                        .copyWith(fontSize: 16),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    product.description,
-                    style:
-                        DeliveryKaTextStyles.textRegular.copyWith(fontSize: 12),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    product.price.currencyPTPT,
-                    style: DeliveryKaTextStyles.textmedium.copyWith(
-                      color: DeliveryKaColors.secondaryColor,
-                      fontSize: 12,
+    return InkWell(
+      onTap: () async {
+        await Navigator.of(context).pushNamed('/productDetail', arguments: {
+          'product': product,
+        });
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      product.name,
+                      style: DeliveryKaTextStyles.textExtraBold
+                          .copyWith(fontSize: 16),
                     ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      product.description,
+                      style: DeliveryKaTextStyles.textRegular
+                          .copyWith(fontSize: 12),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      product.price.currencyPTPT,
+                      style: DeliveryKaTextStyles.textmedium.copyWith(
+                        color: DeliveryKaColors.secondaryColor,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          FadeInImage.assetNetwork(
-            placeholder: 'assets/images/loading.gif',
-            image: product.image,
-            width: 100,
-            height: 100,
-            fit: BoxFit.cover,
-          ),
-        ],
+            FadeInImage.assetNetwork(
+              placeholder: 'assets/images/loading.gif',
+              image: product.image,
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
       ),
     );
   }

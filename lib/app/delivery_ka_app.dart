@@ -17,6 +17,7 @@ class DeliveryKaApp extends StatelessWidget {
         routes: {
           GetRoutes.initial: (context) => const SplashPage(),
           '/homePage': (context) => GetRoutes.homePage,
+          '/productDetail': (context) => GetRoutes.productsDetailPage,
         },
       ),
     );
