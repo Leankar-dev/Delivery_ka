@@ -18,7 +18,8 @@ class DeliveryKaColors {
   static const Color greyDark = Color(0xFF444444);
   static const Color greyMedium = Color(0xFF666666);
   static const Color grey = Colors.grey;
-  static const Color blueColor = Color(0xFF11027E);
+  static const Color blueColor = Colors.blue;
+  static const Color blueColorDark = Color(0xFF11027E);
 
   static const List<Color> greenGradient = [
     Color(0xFF63B5AF),

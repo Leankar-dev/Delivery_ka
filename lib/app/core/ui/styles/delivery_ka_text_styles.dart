@@ -23,7 +23,7 @@ class DeliveryKaTextStyles {
   static TextStyle textExtraBold =
       const TextStyle(fontWeight: FontWeight.w800, fontFamily: 'mplus1');
 
-  static TextStyle textButtonLabel2 = textBold.copyWith(
-    fontSize: 14,
-  );
+  static TextStyle textTitle = textExtraBold.copyWith(fontSize: 28);
+
+  static TextStyle textButtonLabel2 = textBold.copyWith(fontSize: 14);
 }

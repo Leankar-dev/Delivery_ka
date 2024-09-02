@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:delivery_ka/app/dto/order_product_dto.dart';
 import 'package:delivery_ka/app/pages/home/home_state.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository.dart';
 
@@ -31,5 +32,24 @@ class HomeController extends Cubit<HomeState> {
             errorMessage: 'Erro ao buscar produtos.'),
       );
     }
+  }
+
+  void addOrUpdateBag(OrderProductDto orderProduct) {
+    final shoppingBag = [...state.shoppingBag];
+    final orderIndex = shoppingBag.indexWhere(
+      (orderP) => orderP.product == orderProduct.product,
+    );
+
+    if (orderIndex > -1) {
+      if (orderProduct.amount == 0) {
+        shoppingBag.removeAt(orderIndex);
+      } else {
+        shoppingBag[orderIndex] = orderProduct;
+      }
+    } else {
+      shoppingBag.add(orderProduct);
+    }
+
+    emit(state.copyWith(shoppingBag: shoppingBag));
   }
 }
