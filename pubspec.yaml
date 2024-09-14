@@ -50,6 +50,11 @@ dependencies:
   build_runner: ^2.4.12
   match_generator: ^0.4.2
   shared_preferences: ^2.3.2
+  validatorless: ^1.2.3
+  flutter_awesome_select_clone: ^7.5.0
+  # flutter_awesome_select: 
+  #   git:
+  #       url: https://github.com/artflutter/flutter_awesome_select
 
 dev_dependencies:
   flutter_test:

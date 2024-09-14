@@ -1,0 +1,3 @@
+class DeliveryKaUnauthorizedException implements Exception {
+
+}

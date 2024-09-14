@@ -3,6 +3,12 @@
         {
             "id": 1,
             "name": "Leandro Silva",
+            "email": "leandro1@email.com",
+            "password": "123123"
+        },
+        {
+            "id": 2,
+            "name": "Leandro Alvarenga da Silva",
             "email": "leandro@email.com",
             "password": "123123"
         }
@@ -22,8 +28,8 @@
         },
         {
             "id": 3,
-            "name": "==",
-            "acronym": "XX",
+            "name": "Cartáo de Debito",
+            "acronym": "CD",
             "enabled": true
         },
         {

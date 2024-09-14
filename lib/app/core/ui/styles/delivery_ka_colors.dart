@@ -12,7 +12,7 @@ class DeliveryKaColors {
   static const Color iceWhite = Color(0xFFEEF8F7);
   static const Color blackColor = Color(0xFF000000);
   static const Color blackSplash = Color(0xFF140E0E);
-  static const Color errorColor = Color(0xFFFF5252);
+  static const Color redErro = Color(0xFFFF5252);
   static const Color redAssent = Colors.redAccent;
   static const Color redColor = Colors.red;
   static const Color greyDark = Color(0xFF444444);

@@ -1,8 +1,6 @@
 import 'package:delivery_ka/app/core/provider/application_binding.dart';
 import 'package:delivery_ka/app/core/ui/routes/get_routes.dart';
 import 'package:delivery_ka/app/core/ui/theme/theme_config.dart';
-import 'package:delivery_ka/app/pages/auth/login/login_page.dart';
-import 'package:delivery_ka/app/pages/auth/register/register_page.dart';
 import 'package:delivery_ka/app/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +18,9 @@ class DeliveryKaApp extends StatelessWidget {
           GetRoutes.initial: (context) => const SplashPage(),
           '/homePage': (context) => GetRoutes.homePage,
           '/productDetail': (context) => GetRoutes.productsDetailPage,
-          GetRoutes.loginPage: (context) => const LoginPage(),
-          GetRoutes.registerPage: (context) => const RegisterPage(),
+          '/auth/login': (context) => GetRoutes.loginPage,
+          '/auth/register': (context) => GetRoutes.registerPage,
+          '/orderPage': (context) => GetRoutes.orderPage,
         },
       ),
     );

@@ -1,5 +1,11 @@
+import 'package:delivery_ka/app/pages/auth/login/login_controller.dart';
+import 'package:delivery_ka/app/pages/auth/login/login_page.dart';
+import 'package:delivery_ka/app/pages/auth/register/register_controller.dart';
+import 'package:delivery_ka/app/pages/auth/register/register_page.dart';
 import 'package:delivery_ka/app/pages/home/home_controller.dart';
 import 'package:delivery_ka/app/pages/home/home_page.dart';
+import 'package:delivery_ka/app/pages/order/order_controller.dart';
+import 'package:delivery_ka/app/pages/order/order_page.dart';
 import 'package:delivery_ka/app/pages/product_detail/product_detail_controller.dart';
 import 'package:delivery_ka/app/pages/product_detail/product_detail_page.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository.dart';
@@ -13,11 +19,11 @@ class GetRoutes {
 
   static const String initial = '/';
   static const String onboardingPage = '/onboardingPage';
-  static const String loginPage = '/auth/login';
-  static const String registerPage = '/auth/register';
+  // static const String loginPage = '/auth/login';
+  // static const String registerPage = '/auth/register';
   static const String signUpPage = '/signUpPage';
   static const String signInPage = '/signInPage';
-  // static const String homePage = '/homepage';
+  // static const String orderPage = '/orderPage';
   // static const String productDetail = '/productDetail';
 
   static Widget get homePage => MultiProvider(
@@ -50,5 +56,36 @@ class GetRoutes {
             order: args['order'],
           );
         },
+      );
+
+  static Widget get registerPage => MultiProvider(
+        providers: [
+          Provider(
+            create: (context) => RegisterController(
+              context.read(),
+            ),
+          ),
+        ],
+        child: const RegisterPage(),
+      );
+
+  static Widget get loginPage => MultiProvider(
+        providers: [
+          Provider(
+            create: (context) => LoginController(
+              context.read(),
+            ),
+          ),
+        ],
+        child: const LoginPage(),
+      );
+
+  static Widget get orderPage => MultiProvider(
+        providers: [
+          Provider(
+            create: (context) => OrderController(),
+          ),
+        ],
+        child: const OrderPage(),
       );
 }

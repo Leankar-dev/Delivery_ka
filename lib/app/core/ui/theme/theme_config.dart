@@ -36,15 +36,15 @@ class ThemeConfig {
       enabledBorder: _defaultInputBorder,
       focusedBorder: _defaultInputBorder,
       focusedErrorBorder: _defaultInputBorder.copyWith(
-        borderSide: const BorderSide(color: DeliveryKaColors.errorColor),
+        borderSide: const BorderSide(color: DeliveryKaColors.redErro),
       ),
       errorBorder: _defaultInputBorder.copyWith(
-        borderSide: const BorderSide(color: DeliveryKaColors.errorColor),
+        borderSide: const BorderSide(color: DeliveryKaColors.redErro),
       ),
       labelStyle: DeliveryKaTextStyles.textRegular
           .copyWith(color: DeliveryKaColors.blackColor),
       errorStyle: DeliveryKaTextStyles.textRegular
-          .copyWith(color: DeliveryKaColors.errorColor),
+          .copyWith(color: DeliveryKaColors.redErro),
     ),
   );
 }

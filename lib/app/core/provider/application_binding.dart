@@ -1,4 +1,6 @@
 import 'package:delivery_ka/app/core/rest_client/custom_dio.dart';
+import 'package:delivery_ka/app/repositories/auth/auth_repository.dart';
+import 'package:delivery_ka/app/repositories/auth/auth_repository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +19,11 @@ class ApplicationBinding extends StatelessWidget {
         Provider(
           create: (context) =>
               CustomDio(), // deixa o customdio disponivel em qualaquer lugar da app
+        ),
+        Provider<AuthRepository>(
+          create: (context) => AuthRepositoryImpl(
+            dio: context.read(),
+          ),
         ),
       ],
       child: child,

@@ -9,7 +9,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
       Overlay.of(context),
       CustomSnackBar.error(
         message: message,
-        // backgroundColor: DeliveryKaColors.errorColor,
+        // backgroundColor: DeliveryKaColors.redErro,
       ),
     );
   }
@@ -19,7 +19,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
       Overlay.of(context),
       CustomSnackBar.info(
         message: message,
-        // backgroundColor: DeliveryKaColors.errorColor,
+        // backgroundColor: DeliveryKaColors.redErro,
       ),
     );
   }
@@ -29,7 +29,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
       Overlay.of(context),
       CustomSnackBar.success(
         message: message,
-        // backgroundColor: DeliveryKaColors.errorColor,
+        // backgroundColor: DeliveryKaColors.redErro,
       ),
     );
   }

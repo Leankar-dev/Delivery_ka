@@ -20,9 +20,14 @@ class DeliveryKaShoppingBagWidget extends StatelessWidget {
     final sp = await SharedPreferences.getInstance();
     if (!sp.containsKey('accessToken')) {
       // envio para o login
-      final loginResult = await navigator.pushNamed(GetRoutes.loginPage);
+      final loginResult = await navigator.pushNamed('/auth/login');
+
+      if (loginResult == null || loginResult == false) {
+        return;
+      }
     }
     // envio para o order
+    await navigator.pushNamed('/orderPage', arguments: bag);
   }
 
   @override
@@ -35,7 +40,7 @@ class DeliveryKaShoppingBagWidget extends StatelessWidget {
         .currencyPTPT;
 
     return Container(
-      width: context.screenWidht,
+      width: context.screenWidth,
       height: 90,
       padding: const EdgeInsets.all(20),
       decoration: const BoxDecoration(

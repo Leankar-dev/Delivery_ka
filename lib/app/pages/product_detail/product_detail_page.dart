@@ -84,7 +84,7 @@ class _ProductDetailPageState
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: context.screenWidht,
+            width: context.screenWidth,
             height: context.percentHeight(.40),
             decoration: BoxDecoration(
               image: DecorationImage(

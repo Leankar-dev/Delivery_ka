@@ -19,7 +19,7 @@ class SplashPage extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: SizedBox(
-                width: context.screenWidht,
+                width: context.screenWidth,
                 child: Image.asset(
                   'assets/images/brigadeiros_logo.jpg',
                   fit: BoxFit.cover,
