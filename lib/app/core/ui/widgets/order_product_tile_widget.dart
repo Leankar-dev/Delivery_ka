@@ -44,7 +44,7 @@ class OrderProductTileWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        product.price.currencyPTPT,
+                        (orderProduct.amount * product.price).currencyPTPT,
                         style: DeliveryKaTextStyles.textmedium.copyWith(
                           fontSize: 14,
                           color: DeliveryKaColors.secondaryColor,

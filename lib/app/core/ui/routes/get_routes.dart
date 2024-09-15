@@ -8,6 +8,8 @@ import 'package:delivery_ka/app/pages/order/order_controller.dart';
 import 'package:delivery_ka/app/pages/order/order_page.dart';
 import 'package:delivery_ka/app/pages/product_detail/product_detail_controller.dart';
 import 'package:delivery_ka/app/pages/product_detail/product_detail_page.dart';
+import 'package:delivery_ka/app/repositories/order/order_repository.dart';
+import 'package:delivery_ka/app/repositories/order/order_repository_impl.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository.dart';
 import 'package:delivery_ka/app/repositories/products/products_repository_impl.dart';
 import 'package:flutter/material.dart';
@@ -82,8 +84,11 @@ class GetRoutes {
 
   static Widget get orderPage => MultiProvider(
         providers: [
+          Provider<OrderRepository>(
+            create: (context) => OrderRepositoryImpl(dio: context.read()),
+          ),
           Provider(
-            create: (context) => OrderController(),
+            create: (context) => OrderController(context.read()),
           ),
         ],
         child: const OrderPage(),
